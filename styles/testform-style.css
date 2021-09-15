@@ -4,15 +4,22 @@
 
 body {
     margin: 0;
-} 
+}
 
-h1, h2, h3, h4, h5, h6 {
-    color: rgb(8, 68, 129) !important;   
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(8, 68, 129) !important;
     font-family: 'Raleway', sans-serif !important;
     font-weight: 700 !important;
 }
 
-p, input, label {
+p,
+input,
+label {
     color: rgb(8, 68, 129);
     font-family: 'Raleway', sans-serif !important;
     font-weight: 400 !important;
@@ -34,7 +41,7 @@ p, input, label {
     line-height: 1.8 !important;
 }
 
-.bg-div {
+.test-form-bg-div {
     height: 100vh;
 }
 
@@ -68,7 +75,10 @@ p, input, label {
     padding: 6% 3% 3% !important;
 }
 
-.test-form input[type=text], input[type=email], input[type=tel], input[type=date] {
+.test-form input[type=text],
+input[type=email],
+input[type=tel],
+input[type=date] {
     background-color: white;
     border: 1px solid rgb(8, 68, 129);
     border-radius: 5px;

@@ -1,20 +1,26 @@
 /* TAGS */
 
-h1, h2, h3, h4, h5, h6 {
-    color:rgb(8, 68, 129) !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(8, 68, 129) !important;
     font-family: 'Raleway', sans-serif !important;
     font-weight: 700 !important;
 }
 
-p, label {
+p,
+label {
     font-family: 'Raleway', sans-serif !important;
     font-weight: 400 !important;
-  }
+}
 
 
 /* CLASSES */
 
-.back-div {
+.test-page-back-div {
     background-image: linear-gradient(to top right, #4d79ff, #00ffff);
     border-radius: 1%;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -37,7 +43,8 @@ p, label {
 }
 
 .progbar {
-    color:rgb(8, 68, 129);  /* #084581 */
+    color: rgb(8, 68, 129);
+    /* #084581 */
     margin-top: 1%;
     width: 90%;
 }
@@ -153,7 +160,7 @@ p, label {
     border-radius: 5px;
     margin: 3%;
     padding: 6% 2% 2%;
-    width: 90%; 
+    width: 90%;
 }
 
 .slider {
@@ -166,11 +173,11 @@ p, label {
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
-  
+
 .slider::-webkit-slider-thumb:hover {
     transform: scale(1.05);
 }
-  
+
 .slider::-webkit-slider-thumb {
     appearance: none;
     -webkit-appearance: none;
@@ -180,19 +187,16 @@ p, label {
     height: 20px;
     width: 20px;
 }
-  
+
 .slider::-moz-range-thumb {
     cursor: pointer;
     height: 25px;
     width: 25px;
 }
-  
+
 .slider::-moz-range-progress {
-    background-color: rgb(66, 204, 66); 
+    background-color: rgb(66, 204, 66);
 }
 
 
 /* ID'S */
-
-
-
