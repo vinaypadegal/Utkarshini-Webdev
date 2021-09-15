@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/testform-style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>Test Form</title>
+</head>
+<body>
+    <div class="bg-div">
+        <div class="info-card">
+            <img class="header-img" src="images/vector-art_P4_720x350.jpg.img.jpg" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 about-test">
+                        <h2>About the Test</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                            magna aliqua. Tellus id interdum velit laoreet id donec. Ullamcorper a lacus vestibulum sed. Ornare arcu odio ut 
+                            sem nulla pharetra diam. Neque sodales ut etiam sit. Porta nibh venenatis cras sed felis eget velit. Blandit 
+                            turpis cursus in hac habitasse platea dictumst quisque sagittis. Fermentum posuere urna nec tincidunt praesent. 
+                            Sollicitudin nibh sit amet commodo nulla facilisi nullam. Montes nascetur ridiculus mus mauris vitae ultricies 
+                            leo integer malesuada. Augue lacus viverra vitae congue eu consequat ac felis donec.</p>
+                        <p>Laoreet non curabitur gravida arcu ac tortor dignissim convallis. Sollicitudin aliquam ultrices sagittis orci. Aliquet eget sit 
+                            amet tellus cras adipiscing enim. Libero nunc consequat interdum varius sit amet mattis. Eu non diam phasellus vestibulum lorem 
+                            sed risus ultricies tristique. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed. Sed lectus vestibulum mattis 
+                            ullamcorper. Feugiat in fermentum posuere urna nec tincidunt. Egestas egestas fringilla phasellus faucibus.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="test-form">
+                            <!-- <form id="test-form" action="#" method="post" autocomplete="on"> -->
+                                <input id="name" type="text" class="input-field" name="name" placeholder="Full Name">
+                                <input id="email" type="email" class="input-field" name="email" placeholder="Email">
+                                <input id="dob" type="text" class="input-field" name="dob" placeholder="Date of Birth" onfocus="(this.type = 'date')">
+                                <input id="phone" type="tel" class="input-field" name="number" placeholder="Contact Number" pattern="[6-9]{1}[0-9]{9}">
+                                <input id="college" type="text" class="input-field" name="school" placeholder="School/College, Eg : 'DPS, Mumbai, Maharashtra' or 'IIT, Mumbai, Maharashtra'">
+                                <input id="standard" type="text" class="input-field" name="standard" placeholder="Standard/Year of study, Eg : 'GRADE: 12' or 'YEAR: 2'">
+                                <input id="stream" type="text" class="input-field" name="stream" placeholder="Stream/Specialisation/Degree, Eg : 'Science' or 'BTECH: CSE' or 'BBA'">
+                                <input type="checkbox" name="formbox" id="formbox">
+                                <label for="formbox">I agree to submit the above information.</label>
+                                <input id="submit-btn" type="submit" value="Take Test">
+                            <!-- </form>                      -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var data;
+        document.getElementById("submit-btn").addEventListener("click", function(){
+            var filled = true;
+            for(var i = 0; i < document.getElementsByClassName("input-field").length; ++i){
+                if(document.getElementsByClassName("input-field")[i].value == ""){
+                    filled = false;
+                    break;
+                }   
+            }
+            if(!filled) {
+                alert("All fields must be filled!");
+            } else if(document.getElementById("formbox").checked == false){
+                alert("Kindly agree to submit the information!")
+            }
+            else {
+                // data = $("#test-form").serializeArray().reduce(function(obj, item) {
+                //     obj[item.name] = item.value;
+                //     return obj;
+                // }, {});
+                data = {
+                    name: $("#name").val(),
+                    email: $("#email").val(),
+                    dob: $("#dob").val(),
+                    phone: $("#phone").val(),
+                    college: $("#college").val(),
+                    standard: $("#standard").val(),
+                    stream: $("#stream").val()
+                };
+                location.href = "test-page.html";
+            }           
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+/* TAGS */
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(8, 68, 129);
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 700 !important; 
+}
+
+p, span, li{
+    color: rgb(8, 68, 129);
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    background-color: rgb(8, 68, 129);
+    height: 1080px;
+    width: 21%;
+}
+
+#side-img {
+    border-radius: 100%;
+    margin: 8% 0 0 6%;
+    width: 90%;
+}
+
+.sidebar p {
+    color: white;
+    font-size: 130%;
+    position: relative;
+    top: 48%;
+    text-align: center;
+}
+
+.sidebar p:hover {
+    color: rgb(170, 165, 165);
+    cursor: pointer;
+}
+
+
+/* Result Content */
+
+.content-box {
+    padding: 0 4%;
+    width: 79%;
+}
+
+.heading {
+    font-size: 400%;
+    margin: 3% 0 5%;
+}
+
+.analysis {
+    margin: 5% 0;
+}
+
+.pointer {
+    color:rgb(8, 68, 129);
+}
+
+.pointer-div {
+    height: 50px;
+    position: relative;
+    /* bottom: 18%; */
+    bottom: 15px;   
+    /* left: 98.6%; */
+    right: 1%;
+}
+
+/* Recommended Courses */
+
+.course-li {
+    margin-bottom: 30px;
+    width: 70%;
+}
+.courses-recom {
+    margin-top: 5%;
+}
+
+.courses-recom h2 {
+    margin-bottom: 40px;
+}
+

@@ -1,0 +1,132 @@
+/* !important tags have been used to override default bootstrap ui without using internal css */
+
+/* TAGS */
+
+body {
+    margin: 0;
+} 
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(8, 68, 129) !important;   
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+p, input, label {
+    color: rgb(8, 68, 129);
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+
+/* CLASSES */
+
+.about-test {
+    padding-top: 2.2%;
+    text-align: left;
+}
+
+.about-test h2 {
+    margin-bottom: 5%;
+}
+
+.about-test p {
+    line-height: 1.8 !important;
+}
+
+.bg-div {
+    height: 100vh;
+}
+
+.container {
+    padding: 5% 0 3% !important;
+}
+
+.header-img {
+    border-radius: 5px;
+    height: 200px;
+    width: 100%;
+}
+
+.info-card {
+    background-image: linear-gradient(to right top, #4d79ffbf, #00a3ffbf, #00c6ffbf, #00e4ffbf, #00ffffbf);
+    border-radius: 5px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    padding-bottom: 2%;
+    text-align: center;
+    width: 90%;
+}
+
+/* Test Form */
+
+.test-form {
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 3%;
+    margin-top: 5%;
+    padding: 6% 3% 3% !important;
+}
+
+.test-form input[type=text], input[type=email], input[type=tel], input[type=date] {
+    background-color: white;
+    border: 1px solid rgb(8, 68, 129);
+    border-radius: 5px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 4% auto;
+    padding: 5px;
+    width: 90%;
+}
+
+.test-form input[type=text]:focus {
+    background-color: aliceblue;
+    outline: none;
+}
+
+#formbox {
+    margin: 5% 2% 3% 0;
+}
+
+input[type=email]:focus {
+    background-color: aliceblue;
+    outline: none;
+}
+
+input[type=date]:focus {
+    background-color: aliceblue;
+    outline: none;
+}
+
+input[type=tel]:focus {
+    background-color: aliceblue;
+    outline: none;
+}
+
+.test-form input[type=submit] {
+    cursor: pointer;
+    display: block;
+    margin: 3% auto;
+}
+
+.test-form input[type=submit]:hover {
+    transform: scale(1.05);
+}
+
+
+.test-form input[type=submit] {
+    background: #5279f0 !important;
+    background-image: -webkit-linear-gradient(top, #5279f0, #1f6dba) !important;
+    background-image: -moz-linear-gradient(top, #5279f0, #1f6dba) !important;
+    background-image: -ms-linear-gradient(top, #5279f0, #1f6dba) !important;
+    background-image: -o-linear-gradient(top, #5279f0, #1f6dba) !important;
+    background-image: linear-gradient(to bottom, #5279f0, #1f6dba) !important;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    padding: 5px !important;
+    width: 30%;
+}
+
+
+/* ID'S */

@@ -1,0 +1,198 @@
+/* TAGS */
+
+h1, h2, h3, h4, h5, h6 {
+    color:rgb(8, 68, 129) !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+p, label {
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 400 !important;
+  }
+
+
+/* CLASSES */
+
+.back-div {
+    background-image: linear-gradient(to top right, #4d79ff, #00ffff);
+    border-radius: 1%;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    width: 80%;
+}
+
+.carousel-item {
+    margin: 6% auto 8%;
+    padding: 0% 8% 8% 12%;
+    width: 80%;
+}
+
+/* Progress Bar */
+
+.prog {
+    margin: auto;
+    padding: 3% 0 0;
+    text-align: center;
+}
+
+.progbar {
+    color:rgb(8, 68, 129);  /* #084581 */
+    margin-top: 1%;
+    width: 90%;
+}
+
+/* Question */
+
+.question {
+    margin-bottom: 5%;
+}
+
+/* MCQ Option */
+
+.qinp {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    max-width: 70%;
+    min-width: 50%;
+    padding: 1% 1% 0.5%;
+    position: relative;
+}
+
+/* Hide the browser's default radio button */
+.qinp input {
+    cursor: pointer;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+}
+
+.qinp:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.qinp span:hover {
+    cursor: pointer;
+}
+
+.qinp label:hover {
+    cursor: pointer;
+}
+
+.label-option {
+    margin-left: 40px;
+    margin-top: 3px;
+}
+
+.rd-btn {
+    background-color: aliceblue;
+    border-radius: 50%;
+    color: rgb(8, 68, 129);
+    height: 22px;
+    position: absolute;
+    left: 11px;
+    top: 10px;
+    text-align: center;
+    width: 22px;
+}
+
+/* Previous and Next Buttons */
+
+.btn-primary.btn {
+    background: #5279f0 !important;
+    background-image: -webkit-linear-gradient(top, #5279f0, #1f6dba) !important;
+    background-image: -moz-linear-gradient(top, #5279f0, #1f6dba) !important;
+    background-image: -ms-linear-gradient(top, #5279f0, #1f6dba) !important;
+    background-image: -o-linear-gradient(top, #5279f0, #1f6dba) !important;
+    background-image: linear-gradient(to bottom, #5279f0, #1f6dba) !important;
+}
+
+.btn-primary.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    -webkit-border-radius: 4;
+    -moz-border-radius: 4;
+    border-radius: 4px;
+    font-size: 20px;
+    padding: 5px 30px 5px 30px !important;
+    text-decoration: none;
+    text-shadow: 0px 0px 3px #666666;
+}
+
+.btn h5 {
+    color: white !important;
+    margin-top: 10%;
+}
+
+.nextbtn {
+    position: absolute;
+    bottom: -25px;
+    right: 24%;
+}
+
+.prevbtn {
+    position: absolute;
+    bottom: -25px;
+    left: 23%;
+}
+
+/* Slider */
+
+.range-value {
+    margin: 4% auto 2%;
+    text-align: center;
+}
+
+.slide-container {
+    background-color: white;
+    border-radius: 5px;
+    margin: 3%;
+    padding: 6% 2% 2%;
+    width: 90%; 
+}
+
+.slider {
+    -webkit-appearance: none;
+    background: linear-gradient(to right, rgb(66, 204, 66) 0%, rgb(66, 204, 66) 50%, aliceblue 50%, aliceblue 100%);
+    border-radius: 10px;
+    height: 10px;
+    outline: none;
+    width: 100%;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.05);
+}
+  
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    background: rgb(8, 68, 129);
+    border-radius: 100%;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+  
+.slider::-moz-range-thumb {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+}
+  
+.slider::-moz-range-progress {
+    background-color: rgb(66, 204, 66); 
+}
+
+
+/* ID'S */
+
+
+
