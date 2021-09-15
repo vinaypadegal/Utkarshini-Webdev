@@ -1888,15 +1888,24 @@ li {
   width: 90%;
 }
 
+.result #sidebar-heading {
+  margin-top: 10%;
+  padding: 10%;
+  line-height: 1.4;
+}
+
 .result .sidebar p {
   color: white;
-  font-size: 130%;
-  position: relative;
-  top: 48%;
+  font-size: 140%;
   text-align: center;
 }
 
-.result .sidebar p:hover {
+.result #book {
+  position: relative;
+  top: 45%;
+}
+
+.result .sidebar #book:hover {
   color: rgb(170, 165, 165);
   cursor: pointer;
 }

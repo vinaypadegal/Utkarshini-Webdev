@@ -72,6 +72,7 @@
                 //     obj[item.name] = item.value;
                 //     return obj;
                 // }, {});
+                localStorage.setItem("firstname", $("#name").val().split(' ')[0]);
                 data = {
                     name: $("#name").val(),
                     email: $("#email").val(),
