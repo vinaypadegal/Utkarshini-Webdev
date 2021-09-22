@@ -9,13 +9,18 @@ body {
     font-family: "Open Sans", sans-serif;
     padding-top: 2%;
 }
-  
+
 a:hover {
     color: #15A1DD;
     text-decoration: none;
 }
-  
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Raleway", sans-serif;
 }
 
@@ -73,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* Buttons in Cards */
-.get-started-btn {
+.get-started-button {
     background: #15A1DD;
     border-radius: 50px;
     color: #fff;
@@ -84,8 +89,8 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
     transition: 0.3s;
 }
-  
-.get-started-btn:hover {
+
+.get-started-button:hover {
     background: #15A1DD;
     color: #fff;
     text-decoration: none;

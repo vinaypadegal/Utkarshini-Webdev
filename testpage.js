@@ -5,11 +5,11 @@ var number_of_nextbtns = document.querySelectorAll(".nextbtn").length - 1;  // s
 var number_of_slidecontainers = document.querySelectorAll(".slide-container").length;
 
 var current_question = 1;
-var total_number_of_questions = 15;
+var total_number_of_questions = 15;     // change this variable if you ever want to increase the number of questions
 var number_of_questions_attempted = 0;
 var attempted = []
 var user_answers = []
-var solutions = [3,2,4,2,1,1,4,2,1,3]
+var solutions = [3,2,4,2,1,1,4,2,1,3]   // only for the MCQ questions
 
 //fill up attempted and user_answers arrays with default values
 for(var i = 0; i < total_number_of_questions; ++i){
@@ -51,16 +51,18 @@ function handle(name){
     for(var rdb in inp_ops){
         if(inp_ops[rdb].checked == true){
             inp_ops[rdb].parentElement.parentElement.style.backgroundColor = "rgb(66, 204, 66)";
-            let q_ind = name[1] - 1;    
-            if(name == "q10")   q_ind = 9;  // as final MCQ option question has 2 digit question number
+            var q_ind = name.slice(1) - 0 < 10 ? name[1] - 1 : name.slice(1) - 1; 
+            // let q_ind = name[1] - 1;    
+            // if(name == "q10")   q_ind = 9;  // as final MCQ option question has 2 digit question number
             if(attempted[q_ind] == false){
                 attempted[q_ind] = true;
                 ++number_of_questions_attempted;
                 let new_progbar_value = (number_of_questions_attempted/total_number_of_questions) * 100;
                 document.getElementById("progbar").setAttribute("value", new_progbar_value + "");
             }
-            option_num = inp_ops[rdb].id[3] - 0;    // find option number selected
-            if(name == "q10")   option_num = inp_ops[rdb].id[4] - 0;
+            var option_num = name.slice(1) - 0 < 10 ? inp_ops[rdb].id[3] - 0 : inp_ops[rdb].id[4] - 0;
+            // option_num = inp_ops[rdb].id[3] - 0;    // find option number selected
+            // if(name == "q10")   option_num = inp_ops[rdb].id[4] - 0;
             user_answers[q_ind] = option_num;
 
         } else {

@@ -1,0 +1,34 @@
+Important
+
+- I had initially used external stylesheets for the CSS styles. But because of using Bootstrap, a lot of my styles were not getting
+applied as they were being overwritten by the default bootstrap styles. In order to avoid internal styles, I used the !important
+tag wherever required. But when trying to integrate the pages into the site, the !important tags were messing with all the pages on
+the site, so we decided to go with internal styles itself.
+- I have implemented responsiveness in the pages predominantly using bootstrap grid system, but in some places I have used media
+query breakpoints for finer control. 
+
+
+index.html
+
+I have used bootstrap grid system here (and pretty much everywhere else) to implement the 3 tiles. I have almost completely used the 
+existing UI from the Utkarshini events.php page. I have only reused all the classes defined in that page with a bit of modification
+wherever required. The "Request for Consultation" and "Apply for Program" section buttons don't lead anywhere for now. To add links, 
+just put it in the href attribute for the a tag inside the div with class "text-center".
+The images have been taken from freepik.com which may lead to copyrights, so change the images if required. The sizes for the image
+have been defined.
+
+
+test-form.html
+
+The test form page is fairly simple. I have again used the bootstrap grid system to implement responsiveness in this page. There are
+2 Bootstrap columns used- the "about-test" div and the div that encloses the form area. The "about-test" div just consists of a header
+and body. I have used media query breakpoints for small fixes in the mobile user scenario and center aligned the text there. 
+The second div encloses the form section. I have not actually used a form tag because I had to perform a couple of checks before 
+leading the user to the next page which the form's action attribute doesn't allow me to do. First we check if all the input fields
+have been filled, and then we check if the checkbox has been checked. Only if the above 2 conditions have been fulfilled, then 
+we go into the else statement. I have used the localStorage property which stores key value pairs in the web browser in order to
+transfer data from one HTML page to another. I have stored all the inputted data in a Javascript object called data. I then use 
+location.href in order to take the user to the test page.
+
+
+

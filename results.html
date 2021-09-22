@@ -21,9 +21,11 @@
                     <img src="assets/img/adm/Add a subheading (1).png" alt="" id="side-img">
                     <p id="sidebar-heading"></p>
                     <!-- <p id="download" onclick="javascript:demoFromHTML();">Download as PDF<p> -->
+                    <p id="apply">Apply for program</p>
                     <p id="book">Book a session</p>
                 </div>
                 <div class="col-md-9 content-box">
+                    <p id="mobile-p"></p>
                     <h1 class="heading">Analysis Report</h1>
                     <h2>Questionnaire Analysis</h2>
                     <div class="analysis">
@@ -83,6 +85,8 @@
                             </ol>
                         </div>
                     </div>
+                    <button id="applybtn" type="button" class="btn btn-lg mobile-btn" role="button"><p>Apply for Program</p></button>
+                    <button id="bookbtn" type="button" class="btn btn-lg mobile-btn" role="button"><p>Book a Session</p></button>
                 </div>
             </div>
         </div>
@@ -103,6 +107,7 @@
             var firstname = localStorage.getItem("firstname");
 
             document.getElementById("sidebar-heading").innerHTML = "Hi " + firstname + "! We have analysed your answers and have created these personalised recommendations for you!";
+            document.getElementById("mobile-p").innerHTML = "Hi " + firstname + "! We have analysed your answers and have created these personalised recommendations for you!";
 
             // move the thumb pointers to the right location (left = 98.6% will move it to the end of progress bar)
             document.getElementById("apt-pointer").style.left = ((apt/5)*98.6) + '%';

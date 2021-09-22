@@ -837,7 +837,7 @@ section {
 }
 
 .trainers .member img {
-  margin: -1px -1px 30px -1px;
+  margin: 40px -1px 30px -1px;
 }
 
 .trainers .member .member-content {
@@ -1498,7 +1498,7 @@ section {
 
 
 /* Buttons in Cards */
-.admissions .get-started-btn {
+.admissions .get-started-button {
   background: #15A1DD;
   border-radius: 50px;
   color: #fff;
@@ -1510,7 +1510,7 @@ section {
   transition: 0.3s;
 }
 
-.admissions .get-started-btn:hover {
+.admissions .get-started-button:hover {
   background: #15A1DD;
   color: #fff;
   text-decoration: none;
@@ -1554,8 +1554,8 @@ label {
   line-height: 1.8 !important;
 }
 
-.test-form-bg-div .test-form-bg-div {
-  height: 100vh;
+.test-form-bg-div {
+  /* height: 100vh; */
 }
 
 .test-form-bg-div .container {
@@ -1647,6 +1647,16 @@ input[type=date] {
   color: white;
   padding: 5px !important;
   width: 30%;
+}
+
+@media (max-width: 770px) {
+  .test-form-bg-div .about-test {
+    text-align: center;
+  }
+
+  .test-form-bg-div .test-form {
+    margin-left: 0px;
+  }
 }
 
 
@@ -1849,6 +1859,36 @@ label {
   background-color: rgb(66, 204, 66);
 }
 
+@media (max-width: 770px) {
+
+  .test-page-back-div .carousel-item {
+    text-align: center;
+    padding: 0 8% 8%;
+  }
+
+  .test-page-back-div .btn {
+    position: static;
+    display: block;
+  }
+
+  .test-page-back-div .prevbtn {
+    margin: 10% auto 0;
+  }
+
+  .test-page-back-div .nextbtn {
+    margin: 6% auto 0;
+  }
+
+  .test-page-back-div .qinp {
+    margin: auto;
+  }
+
+  .test-page-back-div .label-option {
+    margin-left: 0;
+  }
+
+}
+
 
 /*--------------------------------------------------------------
 # Results
@@ -1878,8 +1918,11 @@ li {
 
 .result .sidebar {
   background-color: rgb(8, 68, 129);
+  /* background-image: linear-gradient(to bottom right, #4d79ff, #00ffff); */
   height: 1080px;
   width: 21%;
+  padding-right: 0 !important;
+  /* display: none; */
 }
 
 .result #side-img {
@@ -1900,9 +1943,19 @@ li {
   text-align: center;
 }
 
+.result #apply {
+  position: relative;
+  top: 435px;
+}
+
+.result .sidebar #apply:hover {
+  color: rgb(170, 165, 165);
+  cursor: pointer;
+}
+
 .result #book {
   position: relative;
-  top: 45%;
+  top: 445px;
 }
 
 .result .sidebar #book:hover {
@@ -1916,6 +1969,11 @@ li {
 .result .content-box {
   padding: 0 4%;
   width: 79%;
+  /* text-align: center; */
+}
+
+.result #mobile-p {
+  display: none;
 }
 
 .result .heading {
@@ -1953,6 +2011,55 @@ li {
 
 .result .courses-recom h2 {
   margin-bottom: 40px;
+}
+
+.result .mobile-btn {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .result .sidebar {
+    display: none;
+  }
+
+  .result .content-box {
+    width: 100%;
+    padding:  0 8%;
+  }
+
+  .result #mobile-p {
+    background-color: rgb(8, 68, 129);
+    color: white;
+    display: block;
+    font-size: 150%;
+    margin-bottom: 5%;
+    padding: 3% 5%;
+  }
+
+  .result .mobile-btn {
+    display: block;
+    background-color: rgb(8, 68, 129);
+    color: white;
+    margin: auto;
+    padding-top: 2.5%;
+  }
+
+  .result .mobile-btn:hover {
+    transform: scale(1.02);
+  }
+
+  .result .mobile-btn p{
+    color: white;
+    /* font-size: 150%; */
+  }
+
+  .result #applybtn {
+    margin-top: 70px;
+  }
+
+  .result #bookbtn {
+    margin-top: 30px;
+  }
 }
 
 
