@@ -141,11 +141,11 @@ label {
   right: 24%;
 }
 
-.test-page-back-div .prevbtn {
+/* .test-page-back-div .prevbtn {
   position: absolute;
   bottom: -25px;
   left: 23%;
-}
+} */
 
 /* Slider */
 
@@ -199,9 +199,14 @@ label {
 
 @media (max-width: 770px) {
 
+  .test-page-back-div {
+    padding-top: 25px;
+  }
+
 .test-page-back-div .carousel-item {
   text-align: center;
   padding: 0 8% 8%;
+  margin-bottom: 0;
 }
 
 .test-page-back-div .btn {
@@ -209,9 +214,9 @@ label {
   display: block;
 }
 
-.test-page-back-div .prevbtn {
+/* .test-page-back-div .prevbtn {
   margin: 10% auto 0;
-}
+} */
 
 .test-page-back-div .nextbtn {
   margin: 6% auto 0;
@@ -269,8 +274,8 @@ label {
                     <span class="rd-btn">D</span>
                   </label>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <!-- <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>  kept this commented just in case you decide to include the prev button back-->
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">              
@@ -303,8 +308,7 @@ label {
                     <span class="rd-btn">D</span>
                   </label>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">                
@@ -336,8 +340,7 @@ label {
                     <span class="rd-btn">D</span>
                   </label>
                 </div>  
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">            
@@ -371,8 +374,7 @@ label {
                     <span class="rd-btn">D</span>
                   </label>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">              
@@ -406,8 +408,7 @@ label {
                     <span class="rd-btn">D</span>
                   </label>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">              
@@ -440,8 +441,7 @@ label {
                     <span class="rd-btn">D</span>
                   </label>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">              
@@ -474,8 +474,7 @@ label {
                     <span class="rd-btn">D</span>
                   </label>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">              
@@ -508,8 +507,7 @@ label {
                     <span class="rd-btn">C</span>
                   </label>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">              
@@ -542,8 +540,7 @@ label {
                     <span class="rd-btn">C</span>
                   </label>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">             
@@ -576,8 +573,7 @@ label {
                     <span class="rd-btn">C</span>
                   </label>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">              
@@ -586,8 +582,7 @@ label {
                   <input type="range" min="0" max="10" value="5" class="slider" id="q11range">
                   <h4 class="range-value" id="q11num">5/10</h4>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">                
@@ -596,8 +591,7 @@ label {
                   <input type="range" min="0" max="10" value="5" class="slider" id="q12range">
                   <h4 class="range-value" id="q12num">5/10</h4>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">              
@@ -606,8 +600,7 @@ label {
                   <input type="range" min="0" max="10" value="5" class="slider" id="q13range">
                   <h4 class="range-value" id="q13num">5/10</h4>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">                
@@ -616,8 +609,7 @@ label {
                   <input type="range" min="0" max="10" value="5" class="slider" id="q14range">
                   <h4 class="range-value" id="q14num">5/10</h4>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
-                <button type="button" class="btn btn-primary btn-lg nextbtn" href="#questionCarousel" role="button" data-slide="next"><h5>Next    </h5></button>
+                <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
               </div>
 
               <div class="carousel-item">                
@@ -626,7 +618,6 @@ label {
                   <input type="range" min="0" max="10" value="5" class="slider" id="q15range">
                   <h4 class="range-value" id="q15num">5/10</h4>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg prevbtn" href="#questionCarousel" role="button" data-slide="prev"><h5>Previous</h5></button>
                 <button type="button" id="test-submit" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Submit    </h5></button>
               </div>
             </div>

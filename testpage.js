@@ -1,7 +1,7 @@
 var number_of_qinps = document.querySelectorAll(".qinp").length;
 var number_of_inputs = document.querySelectorAll(".qinp input").length;
-var number_of_prevbtns = document.querySelectorAll(".prevbtn").length;
-var number_of_nextbtns = document.querySelectorAll(".nextbtn").length - 1;  // subtracted 1 from this as last button that uses this class is submit button
+// var number_of_prevbtns = document.querySelectorAll(".prevbtn").length;
+var number_of_nextbtns = document.querySelectorAll(".nextbtn").length - 1;  // subtracted 1 from this as last button that uses this class is submit button, not next button
 var number_of_slidecontainers = document.querySelectorAll(".slide-container").length;
 
 var current_question = 1;
@@ -27,20 +27,26 @@ for(var i = 0; i < number_of_qinps; ++i){
 }
 
 // adding click functionality to previous button
-for(var i = 0; i < number_of_prevbtns; ++i){
-    document.querySelectorAll(".prevbtn")[i].addEventListener("click", function(){
-        new_question_value = current_question == 1 ? total_number_of_questions : current_question - 1;
-        document.getElementById("qtitle").innerHTML = "Question " + new_question_value + "/" + total_number_of_questions;
-        current_question = new_question_value;
-    })
-}
+// for(var i = 0; i < number_of_prevbtns; ++i){
+//     document.querySelectorAll(".prevbtn")[i].addEventListener("click", function(){
+//         new_question_value = current_question == 1 ? total_number_of_questions : current_question - 1;
+//         document.getElementById("qtitle").innerHTML = "Question " + new_question_value + "/" + total_number_of_questions;
+//         current_question = new_question_value;
+//     })
+// }
 
 // adding click functionality to next button
 for(var i = 0; i < number_of_nextbtns; ++i){
     document.querySelectorAll(".nextbtn")[i].addEventListener("click", function(){
-        new_question_value = current_question == total_number_of_questions ? 1 : current_question + 1;
-        document.getElementById("qtitle").innerHTML = "Question " + new_question_value + "/" + total_number_of_questions;
-        current_question = new_question_value;
+        if(number_of_questions_attempted < current_question){
+            alert("Answer the question before moving forward!");
+        } else{
+            new_question_value = current_question == total_number_of_questions ? 1 : current_question + 1;
+            document.getElementById("qtitle").innerHTML = "Question " + new_question_value + "/" + total_number_of_questions;
+            current_question = new_question_value;
+            this.setAttribute("href", "#questionCarousel");
+            this.setAttribute("data-slide", "next");
+        }
     })
 }
 
@@ -52,8 +58,6 @@ function handle(name){
         if(inp_ops[rdb].checked == true){
             inp_ops[rdb].parentElement.parentElement.style.backgroundColor = "rgb(66, 204, 66)";
             var q_ind = name.slice(1) - 0 < 10 ? name[1] - 1 : name.slice(1) - 1; 
-            // let q_ind = name[1] - 1;    
-            // if(name == "q10")   q_ind = 9;  // as final MCQ option question has 2 digit question number
             if(attempted[q_ind] == false){
                 attempted[q_ind] = true;
                 ++number_of_questions_attempted;
@@ -61,8 +65,6 @@ function handle(name){
                 document.getElementById("progbar").setAttribute("value", new_progbar_value + "");
             }
             var option_num = name.slice(1) - 0 < 10 ? inp_ops[rdb].id[3] - 0 : inp_ops[rdb].id[4] - 0;
-            // option_num = inp_ops[rdb].id[3] - 0;    // find option number selected
-            // if(name == "q10")   option_num = inp_ops[rdb].id[4] - 0;
             user_answers[q_ind] = option_num;
 
         } else {

@@ -6,14 +6,18 @@ tag wherever required. But when trying to integrate the pages into the site, the
 the site, so we decided to go with internal styles itself.
 - I have implemented responsiveness in the pages predominantly using bootstrap grid system, but in some places I have used media
 query breakpoints for finer control. 
+- In the test page, initially there were Previous buttons as well, along with the Next buttons. But I was told to remove them and make
+it so that the user cannot go back to a previous question after clicking Next; so I removed them. However I commented the Previous 
+button code for question 1 only and also commented the styles for it, so kindly uncomment and copy onto all questions in case of any 
+change in requirements.
 
 
 index.html
 
-I have used bootstrap grid system here (and pretty much everywhere else) to implement the 3 tiles. I have almost completely used the 
-existing UI from the Utkarshini events.php page. I have only reused all the classes defined in that page with a bit of modification
-wherever required. The "Request for Consultation" and "Apply for Program" section buttons don't lead anywhere for now. To add links, 
-just put it in the href attribute for the a tag inside the div with class "text-center".
+I have used bootstrap grid system here (and pretty much everywhere else) to implement the 3 tiles. For this page, I have almost 
+completely used the existing UI from the Utkarshini events.php page. I have only reused all the classes defined in that page with a 
+bit of modification wherever required. The "Request for Consultation" and "Apply for Program" section buttons don't lead anywhere for 
+now. To add links, just put it in the href attribute for the a tag inside the div with class "text-center".
 The images have been taken from freepik.com which may lead to copyrights, so change the images if required. The sizes for the image
 have been defined.
 
@@ -31,4 +35,92 @@ transfer data from one HTML page to another. I have stored all the inputted data
 location.href in order to take the user to the test page.
 
 
+test-page.html
 
+The test page uses bootstrap carousels for the sliding questions implementation. I have used the carousel without autoplay and have
+disabled the default buttons as well. Instead I have created custom-styled bootstrap buttons for each question and custom-styled
+sliders as well. The code structure for each question looks like this-
+
+<div class="carousel-item">              
+    <h3 class="question">Q2)  If a number x when divided by 2 leaves a remainder 1, and when divided by 5 leaves a 
+        remainder 3, then what is the remainder it leaves when divided by 10?</h3>
+    <div class="qinp">                 
+        <label class="label-option" for="q2o1">2
+            <input type="radio" name="q2" id="q2o1" oninput="handle(this.name)">
+            <span class="rd-btn">A</span>
+        </label>
+    </div>
+    <br>
+    <div class="qinp">                
+        <label class="label-option" for="q2o2">3
+            <input type="radio" name="q2" id="q2o2" oninput="handle(this.name)">
+            <span class="rd-btn">B</span>
+        </label>
+    </div>
+    <br>
+    <div class="qinp">                
+        <label class="label-option" for="q2o3">7
+            <input type="radio" name="q2" id="q2o3" oninput="handle(this.name)">
+            <span class="rd-btn">C</span>
+        </label>
+    </div>
+    <br>
+    <div class="qinp">                
+        <label class="label-option" for="q2o4">4
+            <input type="radio" name="q2" id="q2o4" oninput="handle(this.name)">
+            <span class="rd-btn">D</span>
+        </label>
+    </div>
+    <button type="button" class="btn btn-primary btn-lg nextbtn" role="button"><h5>Next    </h5></button>
+</div>
+
+Here, each question resides inside a class called 'carousel-item' which I have also added styles to. Each option resides inside a 
+class called 'qinp' and has a label inside which a radio input and span reside. The structure is vey rigid. If the question number
+was 2 and the option number was 3 (option C basically), then the name attribute of the input would be "q2" and the id attribute 
+of the input would be "q2o3". Every radio input within a question has the same name, essentially making it a radio group and every
+radio input has a unique id ofcourse, made up of its question number and option number. These values are used in the Javascript file
+to target the specific inputs so don't change this format. Also, I have hidden all radio buttons from the flow of the page and used 
+a span element instead to style the radio button myself. Finally, there is a Next button for each question except the last one which
+has Submit instead. The Next button checks if you have chosen an option and only then allows you to go to the next question.  
+
+
+testpage.js
+
+test-page.js is mainly used to store all the answers that the user has given then render the result page accordingly. The code in this
+is fairly self explanatory. I first store a lot of variables to keep count of the number of MCQ options, slider questions etc, and also
+use a variable called total_number_of_questions to keep track of how many questions there are in total. I store other variables such
+as the current question the user is in, the number of questions the user has attempted etc. The 'attempted' array stores the user's
+answers and the 'solutions' array stores the actual solutions for the MCQ questions. 
+
+When the user clicks on the rectangular parent div that represents the option, the radio button inside should get clicked. This is 
+implemented at line 22. The clicking of the radio button will in turn will call the handle function which is associated with every 
+radio input in test-page.html. The handle function takes as argument the name attribute of the input that was clicked. This is done
+so we can identify the 4 radio buttons that have the same name and treat them accordingly. Note that the checking of one radio 
+button in a radio group automatically unchecks all the other radio buttons in the radio group. So I just run a for loop and check 
+which is the radio button that is currently checked, and change the background color of its parent div to green. I also change the
+progress bar value, store the answer given by the user and update other variables. For the other 3 options, I just turn the background 
+color to white to represent uncheck. 
+
+Similarly, I store the user's input for the slider questions as well and change the associated label as required. When user gives
+input, I store the input, change progress bar values and also update other variables. 
+
+I implement the functionality of the Next buttons at line 39. Only if user has answered the current question, they will be allowed 
+to move forward and the question number on the top is updated as well. Otherwise an alert is shown.
+
+Finally when user submits the test, first I check if all questiions have been answered and if yes, then I calculate the scores for
+the aptitude and verbal sections. I also perform calculations for the subject recommendations part, and then store all the 
+variables using localStorage like before. I used JSON.stringify() for the courses array as localStorage only takes string inputs.
+This will later be converted back into JS object in the result.html page using JSON.parse(). I use location.href to take it to 
+result.html.
+
+I also used media query breakpoints for some finer details.
+
+
+results.html
+
+In results.html, I again use boostrap grids. There is a left section which shows some text and buttons and the main right section
+which shows the results. I retrieve all the stored items through localStorage and then perform the required calculations to 
+dynamically render the required components such as headers and pointers. I also sort the recommended courses list in decreasing
+order and render them from most recommended to least recommended. 
+For the mobile UI, I strongly use media query breakpoints where I completely remove the side section. The text is rendered on the top,
+the image is not rendered at all on mobile, and I style the buttons differently and center align them for mobile users.    

@@ -1800,7 +1800,7 @@ label {
 .test-page-back-div .nextbtn {
   position: absolute;
   bottom: -25px;
-  right: 24%;
+  right: 46%;
 }
 
 .test-page-back-div .prevbtn {
@@ -1861,9 +1861,14 @@ label {
 
 @media (max-width: 770px) {
 
+  .test-page-back-div {
+    padding-top: 25px;
+  }
+
   .test-page-back-div .carousel-item {
     text-align: center;
     padding: 0 8% 8%;
+    margin-bottom: 0px;
   }
 
   .test-page-back-div .btn {
@@ -1871,12 +1876,12 @@ label {
     display: block;
   }
 
-  .test-page-back-div .prevbtn {
+  /* .test-page-back-div .prevbtn {
     margin: 10% auto 0;
-  }
+  } */
 
   .test-page-back-div .nextbtn {
-    margin: 6% auto 0;
+    margin: 15% auto 0;
   }
 
   .test-page-back-div .qinp {
