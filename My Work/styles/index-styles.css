@@ -28,14 +28,14 @@ h6 {
 /* CLASSES */
 
 /* Cards */
-.card {
+.admissions .card {
     border: 0;
     margin-bottom: 60px;
     padding: 0 30px;
     position: relative;
-}
-
-.card-body {
+  }
+  
+  .admissions .card-body {
     background: #fff;
     border-top: 4px solid #fff;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -43,42 +43,42 @@ h6 {
     padding: 30px;
     transition: 0.3s;
     z-index: 10;
-}
-
-.card:hover .card-body {
+  }
+  
+  .admissions .card:hover .card-body {
     border-color: #15A1DD;
-}
-
-.card-img {
+  }
+  
+  .admissions .card-img {
     border-radius: 0;
     margin-left: -30px;
     overflow: hidden;
     width: calc(100% + 60px);
     z-index: 9;
-}
-
-.card-img img {
+  }
+  
+  .admissions .card-img img {
     max-width: 100%;
     transition: all 0.3s ease-in-out;
-}
-
-.card:hover img {
+  }
+  
+  .admissions .card:hover img {
     transform: scale(1.1);
-}
-
-.card-text {
+  }
+  
+  .admissions .card-text {
     color: #5e5e5e;
-}
-
-.card-title {
+  }
+  
+  .admissions .card-title {
     font-weight: 700;
     margin-bottom: 20px;
     text-align: center;
-}
-
-
-/* Buttons in Cards */
-.get-started-button {
+  }
+  
+  
+  /* Buttons in Cards */
+  .admissions .get-started-button {
     background: #15A1DD;
     border-radius: 50px;
     color: #fff;
@@ -88,14 +88,14 @@ h6 {
     padding: 8px 25px;
     white-space: nowrap;
     transition: 0.3s;
-}
-
-.get-started-button:hover {
+  }
+  
+  .admissions .get-started-button:hover {
     background: #15A1DD;
     color: #fff;
     text-decoration: none;
     transform: scale(1.1);
-}
+  }
 
 
 /* ID'S */

@@ -1,0 +1,169 @@
+/* TAGS */
+
+.result h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(8, 68, 129);
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.result p,
+span,
+li {
+  color: rgb(8, 68, 129);
+  font-family: 'Raleway', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+
+/* Sidebar */
+
+.result .sidebar {
+  background-color: rgb(8, 68, 129);
+  /* background-image: linear-gradient(to bottom right, #4d79ff, #00ffff); */
+  height: 1080px;
+  width: 21%;
+  padding-right: 0 !important;
+  /* display: none; */
+}
+
+.result #side-img {
+  border-radius: 100%;
+  margin: 8% 0 0 6%;
+  width: 90%;
+}
+
+.result #sidebar-heading {
+  margin-top: 10%;
+  padding: 10%;
+  line-height: 1.4;
+}
+
+.result .sidebar p {
+  color: white;
+  font-size: 140%;
+  text-align: center;
+}
+
+.result #apply {
+  position: relative;
+  top: 435px;
+}
+
+.result .sidebar #apply:hover {
+  color: rgb(170, 165, 165);
+  cursor: pointer;
+}
+
+.result #book {
+  position: relative;
+  top: 445px;
+}
+
+.result .sidebar #book:hover {
+  color: rgb(170, 165, 165);
+  cursor: pointer;
+}
+
+
+/* Result Content */
+
+.result .content-box {
+  padding: 0 4%;
+  width: 79%;
+  /* text-align: center; */
+}
+
+.result #mobile-p {
+  display: none;
+}
+
+.result .heading {
+  font-size: 400%;
+  margin: 3% 0 5%;
+}
+
+.result .analysis {
+  margin: 5% 0;
+}
+
+.result .pointer {
+  color: rgb(8, 68, 129);
+}
+
+.result .pointer-div {
+  height: 50px;
+  position: relative;
+  /* bottom: 18%; */
+  bottom: 15px;
+  /* left: 98.6%; */
+  right: 1%;
+}
+
+/* Recommended Courses */
+
+.result .course-li {
+  margin-bottom: 30px;
+  width: 70%;
+}
+
+.result .courses-recom {
+  margin-top: 5%;
+}
+
+.result .courses-recom h2 {
+  margin-bottom: 40px;
+}
+
+.result .mobile-btn {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .result .sidebar {
+    display: none;
+  }
+
+  .result .content-box {
+    width: 100%;
+    padding: 5% 8%;
+  }
+
+  .result #mobile-p {
+    background-color: rgb(8, 68, 129);
+    color: white;
+    display: block;
+    font-size: 150%;
+    margin-bottom: 5%;
+    padding: 3% 5%;
+  }
+
+  .result .mobile-btn {
+    display: block;
+    background-color: rgb(8, 68, 129);
+    color: white;
+    margin: auto;
+    padding-top: 2.5%;
+  }
+
+  .result .mobile-btn:hover {
+    transform: scale(1.02);
+  }
+
+  .result .mobile-btn p{
+    color: white;
+    /* font-size: 150%; */
+  }
+
+  .result #applybtn {
+    margin-top: 70px;
+  }
+
+  .result #bookbtn {
+    margin-top: 30px;
+  }
+}
