@@ -1,2 +1,4 @@
 # Utkarshini-Webdev
-Web Development work for Utkarshini Edutech. Developing their testing and results pages. 
+A repository to hold my web development contributions to the Utkarshini Edutech site. 
+
+All my contributions are stored in the My Work folder. 
